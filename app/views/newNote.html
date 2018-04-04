@@ -1,0 +1,32 @@
+<h2>Add New Note</h2>
+<div class="row">
+    <div class="col-md-12">
+        <form name="newNoteForm" novalidate="" ng-submit="addNewNote(newNoteForm)">
+            <div class="form-group" ng-class="{ 'has-error' : newNoteForm.subject.$invalid && newNoteForm.$submitted}">
+                <label for="subject" class="control-label">Subject</label>
+                <input type="text" required ng-model="form.subject" class="form-control" id="subject" placeholder="Please Enter Call Subject" name="subject">
+                <div ng-messages="newNoteForm.subject.$error" class="form-errors no-animate">
+    				<div ng-messages-include="views/templates/formErrors.html"></div>
+				</div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : newNoteForm.duration.$invalid && newNoteForm.$submitted}">
+                <label for="duration" class="control-label">Duration</label>
+                <input type="number" required ng-model="form.duration" class="form-control" id="duration" placeholder="Please Enter Call Duration" name="duration">
+                <div ng-messages="newNoteForm.duration.$error" class="form-errors no-animate">
+    				<div ng-messages-include="views/templates/formErrors.html"></div>
+				</div>
+            </div>            
+            <div class="form-group" ng-class="{ 'has-error' : newNoteForm.owner.$invalid && newNoteForm.$submitted}">
+                <label for="owner" class="control-label">Owner</label>
+                <input type="text" required ng-model="form.owner" class="form-control" id="email1" placeholder="Please Enter Owner name" name="owner">
+                <div ng-messages="newNoteForm.owner.$error" class="form-errors no-animate">
+    				<div ng-messages-include="views/templates/formErrors.html"></div>
+				</div>
+            </div>
+
+            <a type="button" href="#/main" class="btn btn-default btn-default">Cancel</a>
+            <button type="submit" class="btn btn-default btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>

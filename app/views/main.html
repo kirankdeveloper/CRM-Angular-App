@@ -1,0 +1,20 @@
+
+<h2>Call Lists </h2>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <tr>
+                <th>Call Subject</th>
+                <th> Duration(In mins) </th>
+                <th> Owner Name </th>
+            </tr>
+            <tr ng-repeat="call in notes">
+                <td>{{call.subject}}</td>
+                <td>{{call.duration}}</td>
+                <td>{{call.name}}</td>
+            </tr>
+        </table>
+        <a href="#/newNote" class="btn btn-lg btn-primary " role="button" >Add new Note</a>
+    </div>  
+
+</div>
